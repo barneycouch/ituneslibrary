@@ -1,0 +1,4 @@
+setwd("/Users/Barney/Dropbox/other/code/etc/musiclibrary/processerout/")
+bitrate <-read.table("bitrate.txt",header=TRUE,fill=TRUE,strip.white=TRUE,sep='\n')
+bitratem<-as.matrix(bitrate)
+hist(bitratem,breaks=120,col=rainbow(60),main="histogram of music bitrate",xlab="bitrate (kb/s)",ylab="frequency",xlim=c(50,350))

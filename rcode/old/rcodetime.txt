@@ -1,0 +1,5 @@
+setwd("/Users/Barney/Dropbox/other/code/etc/musiclibrary/processerout/")
+time <-read.table("time.txt",header=TRUE,fill=TRUE,strip.white=TRUE,sep='\n')
+timem <-as.matrix(time)
+hist(timem,breaks=300,col=rainbow(60),main="histogram of music duration (full dataset)",xlab="duration (seconds)",ylab="frequency")
+hist(timem,breaks=6000,col=rainbow(600),main="histogram of music duration (reduced dataset)",xlab="duration (seconds)",ylab="frequency",xlim=c(0,500))

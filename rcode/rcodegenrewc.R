@@ -1,0 +1,6 @@
+setwd("/Users/Barney/Dropbox/other/code/etc/musiclibrary/processerout/")
+library("wordcloud")
+genre <-read.table("genre.txt",header=TRUE,fill=TRUE,strip.white=TRUE,sep='\n')
+genretable <-table(genre)
+df<-as.data.frame(genretable)
+wordcloud(df$genre,df$Freq,vfont=c("sans serif","plain"),rot.per=0.2,scale=c(4,0.15),colors=gray(100:10/100))

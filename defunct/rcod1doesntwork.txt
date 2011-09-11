@@ -1,0 +1,8 @@
+setwd("/Users/Barney/Dropbox/other/code/etc/musiclibrary")
+export <-read.table("itunesexport.txt",header=TRUE, sep="\t", fill=TRUE, strip.white=TRUE)
+attach(export)
+names(export)
+class(export)
+tail(Plays)
+hist(as.numeric(Plays), breaks=20, col=rainbow(5), xlab="Times Played", main="Play Count:")
+hist(as.numeric(Time), breaks=40, main="Track Time:", xlab="Time (seconds)")

@@ -1,0 +1,6 @@
+setwd("/Users/Barney/Dropbox/other/code/etc/musiclibrary/processerout/")
+size <-read.table("size.txt",header=TRUE,fill=TRUE,strip.white=TRUE,sep='\n')
+head(size)
+sizem <-as.matrix(size)
+hist(sizem,breaks=300,col=rainbow(100),main="histogram of music size (full dataset)",xlab="size (bytes)",ylab="frequency",xlim=c(0,250000000))
+hist(sizem,breaks=1900,col=rainbow(300),main="histogram of music size (reduced dataset)",xlab="size (bytes)",ylab="frequency",xlim=c(0,25000000))

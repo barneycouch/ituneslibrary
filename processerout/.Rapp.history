@@ -1,0 +1,4 @@
+setwd("/Users/Barney/Dropbox/other/code/etc/musiclibrary/processerout/")#
+library("ggplot2")#
+year <-read.table("year.txt",header=TRUE,fill=TRUE,strip.white=TRUE,sep='\n')#
+ggplot(year,aes(Year))+geom_histogram(binwidth=1,aes(fill=..count..))+xlab("year")+xlim(c(1955,2011))

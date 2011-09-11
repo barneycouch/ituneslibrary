@@ -1,0 +1,8 @@
+setwd("/Users/Barney/Dropbox/other/code/etc/musiclibrary/processerout/")
+genre <-read.table("genre.txt",header=TRUE,fill=TRUE,strip.white=TRUE,sep='\n')
+genretable <-table(genre)
+length(genretable)
+par("mar")
+par(mar=c(7.5,4.1,4.1,2.1))
+barplot(genretable,las=3,cex.names=0.8,col=rainbow(40),main="genre frequency",ylab="frequency")
+par(mar = c(5.1,4.1,4.1,2.1))
